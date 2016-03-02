@@ -1,4 +1,6 @@
-
+<% content_for :title do %>
+<title><%= @user.name %> - Monolist”</title>
+<% end %>
   <div class="user-profile">
   <div class="icon">
     <%= gravatar_for user, size: 100 %>
