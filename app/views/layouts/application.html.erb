@@ -4,8 +4,9 @@
   <% if content_for?(:head) %>
     <%= yield :head %>
   <% else %>
-    <title>Monolist</title>
+    <title><%= @user.name %> - Monolist</title>
   <% end %>
+  <meta name="description" content="<%= @user.name %>のモノページ。<%= @user.name %>の欲しいモノ、持ってるモノを表示しています。">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
